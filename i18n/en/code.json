@@ -234,25 +234,25 @@
     "message": "For a quick installation, navigate to your server Variants tab and select GeyserMC. The server will be automatically reinstalled with Geyser-Spigot alongside a Paper server. For a manual install using any other variant such as Paper, you will need to upload the GeyserMC jar to your server and set the the clone-remote-port option to true. See AxentHost's [guide](https://axenthost.com/knowledgebase/categories/minecraft/create-a-crossplay-server-with-geyser/) to see all the steps."
   },
   "pages.main.title": {
-    "message": "Revolutionize Your Minecraft Server"
+    "message": "Connect Minecraft Education Edition to Java Servers"
   },
   "pages.main.subtitle": {
-    "message": "Enable clients from Minecraft Bedrock Edition to join your Minecraft Java server"
+    "message": "Enable Minecraft: Education Edition clients to join your Minecraft: Java Edition server"
   },
   "components.homepage_features.1.line1": {
-    "message": "Geyser is a program that allows Minecraft: Bedrock Edition clients to join Minecraft: Java Edition servers, allowing for true crossplay between both editions of the game."
+    "message": "EduGeyser is a Geyser fork that allows Minecraft: Education Edition clients to join Minecraft: Java Edition servers. Regular Bedrock Edition players can connect at the same time, for true crossplay across editions."
   },
   "components.homepage_features.1.line2": {
-    "message": "The ultimate goal of this project is to allow Minecraft: Bedrock Edition users to join Minecraft: Java Edition servers as seamlessly as possible."
+    "message": "The goal of this project is to let students and educators on Minecraft: Education Edition join standard Java Edition servers as seamlessly as possible."
   },
   "components.homepage_features.2": {
-    "message": "Geyser acts as a translator which sits between the Bedrock client and the Java server. It takes data from the Bedrock client and translates it into a format the Java server understands and vice versa. Geyser works with any modern Minecraft version and can be installed either as a plugin or ran as a standalone program."
+    "message": "EduGeyser acts as a translator which sits between the Education Edition client and the Java server. It takes data from the client and translates it into a format the Java server understands and vice versa. EduGeyser works with any modern Minecraft version and can be installed either as a plugin or run as a standalone program."
   },
   "components.homepage_features.3.line1": {
-    "message": "Geyser can be joined from Bedrock clients on Windows 10/11, iOS, Android, and even consoles. Geyser works with a wide array of hosting providers, but can also be used as its own standalone proxy to join any Minecraft server!"
+    "message": "EduGeyser can be joined from Minecraft: Education Edition on Windows, iPad, Chromebook, and Mac. It works with a wide array of hosting providers, but can also be used as its own standalone proxy to join any Minecraft server!"
   },
   "components.homepage_features.3.line2": {
-    "message": "If you are a server owner, you can install our Floodgate plugin which allows Xbox Live authenticated Bedrock users to join without a Java Edition account!"
+    "message": "Students authenticate through their school's Microsoft 365 accounts, and their identity is cryptographically verified through Microsoft Education services. Install our EduFloodgate plugin so Education Edition users can join without a Java Edition account!"
   },
   "pages.download.title": {
     "message": "Download"
@@ -261,10 +261,13 @@
     "message": "Download the latest versions of our various projects."
   },
   "pages.download.description.geyser": {
-    "message": "A bridge/proxy allowing you to connect to Minecraft: Java Edition servers with Minecraft: Bedrock Edition."
+    "message": "A bridge/proxy allowing Minecraft: Education Edition and Bedrock Edition clients to connect to Minecraft: Java Edition servers."
   },
   "pages.download.description.floodgate": {
-    "message": "Hybrid mode plugin to allow for connections from Geyser to join online mode servers."
+    "message": "Hybrid mode plugin that lets EduGeyser players join online mode servers without a Java Edition account."
+  },
+  "pages.download.description.education-extension": {
+    "message": "A required extension for EduGeyser that enables Minecraft: Education Edition clients to connect and registers your server with Education Edition. It is built specifically for EduGeyser and does not work with a standard Geyser installation."
   },
   "pages.download.description.geyserconnect": {
     "message": "A plugin to allow for Geyser players to connect to your server without needing to use a proxy."

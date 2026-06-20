@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "GeyserMC",
+    "message": "EduGeyser",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "GeyserMC logo",
+    "message": "EduGeyser logo",
     "description": "The alt text of navbar logo"
   },
   "item.label.Wiki": {
@@ -24,12 +24,12 @@
     "description": "Navbar item with label Download"
   },
   "item.label.Geyser": {
-    "message": "Geyser",
-    "description": "Navbar item with label Geyser"
+    "message": "EduGeyser",
+    "description": "Navbar item with label EduGeyser"
   },
   "item.label.Floodgate": {
-    "message": "Floodgate",
-    "description": "Navbar item with label Floodgate"
+    "message": "EduFloodgate",
+    "description": "Navbar item with label EduFloodgate"
   },
   "item.label.REST APIs": {
     "message": "REST APIs",

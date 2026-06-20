@@ -4,15 +4,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { docOgRenderer, blogOgRenderer, pageOgRenderer } from './src/renderer/ImageRenderers';
 
 const config: Config = {
-    title: 'GeyserMC',
-    tagline: 'Revolutionize Your Minecraft Server',
+    title: 'EduGeyser',
+    tagline: 'Connect Minecraft Education Edition to Java Servers',
     favicon: 'img/favicon.ico',
-    
-    url: 'https://geysermc.org',
+
+    url: 'https://edugeyser.org',
     baseUrl: '/',
 
-    organizationName: 'GeyserMC',
-    projectName: 'GeyserWebsite',
+    organizationName: 'SendableMetatype',
+    projectName: 'EduGeyserWebsite',
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -87,9 +87,9 @@ const config: Config = {
     themeConfig: {
         image: 'img/site/geyser.png',
         navbar: {
-            title: 'GeyserMC',
+            title: 'EduGeyser',
             logo: {
-                alt: 'GeyserMC logo',
+                alt: 'EduGeyser logo',
                 src: 'img/apple-touch-icon.png',
             },
             items: [
@@ -103,12 +103,12 @@ const config: Config = {
                         {
                             type: 'doc',
                             docId: 'geyser/index',
-                            label: 'Geyser',
+                            label: 'EduGeyser',
                         },
                         {
                             type: 'doc',
                             docId: 'floodgate/index',
-                            label: 'Floodgate',
+                            label: 'EduFloodgate',
                         },
                         {
                             type: 'doc',
@@ -148,12 +148,12 @@ const config: Config = {
                     className: 'header-download-link'
                 },
                 { // Name on mobile sidebar specified in custom.scss
-                    href: 'https://github.com/GeyserMC/Geyser',
+                    href: 'https://github.com/SendableMetatype',
                     position: 'right',
                     className: 'header-github-link'
                 },
                 { // Name on mobile sidebar specified in custom.scss
-                    href: 'https://discord.gg/geysermc',
+                    href: 'https://discord.gg/WUHDqBxwdD',
                     position: 'right',
                     className: 'header-discord-link'
                 },
@@ -165,22 +165,22 @@ const config: Config = {
         },
         footer: {
             logo: {
-                alt: 'GeyserMC logo',
+                alt: 'EduGeyser logo',
                 src: 'img/site/geyser-text.svg',
                 href: '/',
                 width: 430,
             },
-            copyright: `Copyright © ${new Date().getFullYear()} GeyserMC. Built with Docusaurus.<br>This website is not an official Minecraft website and is not associated with Mojang Studios or Microsoft. All product and company names are trademarks or registered trademarks of their respective holders. Use of these names does not imply any affiliation or endorsement by them.`,
+            copyright: `Copyright © ${new Date().getFullYear()} EduGeyser. Built with Docusaurus.<br>This website is not an official Minecraft website and is not associated with Mojang Studios or Microsoft. All product and company names are trademarks or registered trademarks of their respective holders. Use of these names does not imply any affiliation or endorsement by them.`,
             links: [
                 {
                     title: 'Wiki',
                     items: [
                         {
-                            label: 'Geyser',
+                            label: 'EduGeyser',
                             to: 'wiki/geyser/setup',
                         },
                         {
-                            label: 'Floodgate',
+                            label: 'EduFloodgate',
                             to: 'wiki/floodgate/setup',
                         },
                         {
@@ -197,16 +197,16 @@ const config: Config = {
                     title: 'Downloads',
                     items: [
                         {
-                            label: 'Geyser',
-                            to: 'download?project=geyser',
+                            label: 'EduGeyser',
+                            href: 'https://codeberg.org/SendableMetatype/EduGeyser/releases',
                         },
                         {
-                            label: 'Floodgate',
-                            to: 'download?project=floodgate',
+                            label: 'EduFloodgate',
+                            href: 'https://codeberg.org/SendableMetatype/EduFloodgate/releases',
                         },
                         {
-                            label: 'Other',
-                            to: 'download?project=other-projects',
+                            label: 'Extension',
+                            href: 'https://github.com/SendableMetatype/Geyser-Education-Extension/releases',
                         }
                     ],
                 },
@@ -219,11 +219,11 @@ const config: Config = {
                         },
                         {
                             label: 'Discord',
-                            href: 'https://discord.gg/geysermc',
+                            href: 'https://discord.gg/WUHDqBxwdD',
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/GeyserMC/Geyser',
+                            href: 'https://github.com/SendableMetatype',
                         },
                         {
                             label: 'Reddit',

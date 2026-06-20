@@ -14,14 +14,14 @@ function HomepageHeader() {
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className={styles.heroContent}>
-                <img src={HeroImage} alt="Geyser Logo" className={styles.heroImage} />
-                <img src={HeroImage} alt="Geyser Logo" className={styles.heroImageBackgroundBlur} />
+                <img src={HeroImage} alt="EduGeyser Logo" className={styles.heroImage} />
+                <img src={HeroImage} alt="EduGeyser Logo" className={styles.heroImageBackgroundBlur} />
                 <div className={styles.textSection}>
                     <Heading as="h1" className="hero__title">
-                        <Translate id='pages.main.title'>Revolutionize Your Minecraft Server</Translate>
+                        <Translate id='pages.main.title'>Connect Education Edition to Java Servers</Translate>
                     </Heading>
                     <p className="hero__subtitle">
-                        <Translate id='pages.main.subtitle'>Enable clients from Minecraft Bedrock Edition to join your Minecraft Java server</Translate>
+                        <Translate id='pages.main.subtitle'>Enable Minecraft Education Edition clients to join your Minecraft Java server</Translate>
                     </p>
                 </div>
             </div>
@@ -32,20 +32,21 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
     return (
         <Layout
-            title="Geyser"
-            description="Enable clients from Minecraft Bedrock Edition to join your Minecraft Java server."
+            title="EduGeyser"
+            description="Enable Minecraft Education Edition clients to join your Minecraft Java server."
         >
             <HomepageHeader />
 
             <main>
                 <div className={clsx(styles.features, "container")}>
                     <HomepageFeature
-                        title="What is Geyser?"
+                        title="What is EduGeyser?"
                         image={Crossplatform2Img}
+                        wide
                     >
-                        <Translate id="components.homepage_features.1.line1">Geyser is a program that allows Minecraft: Bedrock Edition clients to join Minecraft: Java Edition servers, allowing for true crossplay between both editions of the game.</Translate>
+                        <Translate id="components.homepage_features.1.line1">EduGeyser is a Geyser fork that allows Minecraft Education Edition clients to join Minecraft Java Edition servers. Both Education and regular Bedrock players can connect simultaneously.</Translate>
                         <br /><br />
-                        <Translate id="components.homepage_features.1.line2">The ultimate goal of this project is to allow Minecraft: Bedrock Edition users to join Minecraft: Java Edition servers as seamlessly as possible.</Translate>
+                        <Translate id="components.homepage_features.1.line2">Students authenticate through their school's Microsoft 365 accounts. Player identity is cryptographically verified via Microsoft Education Services.</Translate>
                     </HomepageFeature>
 
                     <HomepageFeature

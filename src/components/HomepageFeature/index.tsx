@@ -6,11 +6,12 @@ interface HomepageFeatureProps {
     title: string;
     image?: string;
     flipped?: boolean;
+    wide?: boolean;
 }
 
-export const HomepageFeature: React.FC<PropsWithChildren<HomepageFeatureProps>> = ({ title, image, flipped, children }) => {
+export const HomepageFeature: React.FC<PropsWithChildren<HomepageFeatureProps>> = ({ title, image, flipped, wide, children }) => {
     return (
-        <div className={clsx(styles.feature, { [styles.flipped]: flipped })}>
+        <div className={clsx(styles.feature, { [styles.flipped]: flipped, [styles.wide]: wide })}>
             <div className={clsx(styles.content, "text--left padding-horiz--md")}>
                 <h3 className={styles.title}>{title}</h3>
                 {children}

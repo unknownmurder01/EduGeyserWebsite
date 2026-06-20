@@ -4,6 +4,15 @@
     gap: 10px;
 }
 
+.feature.wide {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.feature.wide img {
+    width: 100%;
+    height: auto;
+}
+
 .feature.flipped > *:first-child {
     order: 2;
 }
@@ -22,7 +31,8 @@
 }
 
 @media (max-width: 768px) {
-    .feature {
+    .feature,
+    .feature.wide {
         grid-template-columns: 1fr;
     }
 

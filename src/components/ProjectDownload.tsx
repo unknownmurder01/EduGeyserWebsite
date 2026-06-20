@@ -17,9 +17,11 @@ interface ProjectDownloadProps {
     };
     gridColumns?: number;
     warning?: React.ReactNode;
+    downloadUrl?: string;
+    staticDownloads?: boolean;
 }
 
-export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, description, setup, downloadsInfo, additionalDownloads, gridColumns, warning }) => {
+export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, description, setup, downloadsInfo, additionalDownloads, gridColumns, warning, downloadUrl, staticDownloads }) => {
     const [platformInfo, setPlatformInfo] = useState<Downloads.Builds>({
         project_id: '',
         project_name: '',
@@ -43,6 +45,10 @@ export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, des
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
+        if (staticDownloads) {
+            setIsLoaded(true);
+            return;
+        }
         const fetchPlatformInfo = async () => {
             try {
                 const response = await fetch(new URL(`/v2/projects/${projectId}/versions/latest/builds`, 'https://download.geysermc.org'));
@@ -66,7 +72,7 @@ export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, des
         };
 
         fetchPlatformInfo();
-    }, [projectId]);
+    }, [projectId, staticDownloads]);
 
     const fadeInStyle = {
         opacity: isLoaded ? 1 : 0,
@@ -78,9 +84,9 @@ export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, des
             <p>{description}</p>
             <Columns>
                 <Column>
-                    <h3>Build #{latestBuild.build} · {new Date(latestBuild.time).toLocaleDateString()}:</h3>
+                    <h3>{staticDownloads ? 'Latest release:' : `Build #${latestBuild.build} · ${new Date(latestBuild.time).toLocaleDateString()}:`}</h3>
                     <Grid elementsPerRow={gridColumns || 2} gap="8px">
-                        { warning && 
+                        { warning &&
                             <div className='warning-box'>
                                 { warning }
                             </div>
@@ -91,12 +97,12 @@ export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, des
                             </a>
                         }
                         {
-                            Object.keys(latestBuild.downloads).map((platformId, i) => {
+                            (staticDownloads ? Object.keys(downloadsInfo) : Object.keys(latestBuild.downloads)).map((platformId, i) => {
                                 return (
-                                    <a href={`https://download.geysermc.org/v2/projects/${projectId}/versions/latest/builds/latest/downloads/${platformId}`} key={i} className='no-underline download-button large-button'>
+                                    <a href={downloadUrl || `https://download.geysermc.org/v2/projects/${projectId}/versions/latest/builds/latest/downloads/${platformId}`} key={i} className='no-underline download-button large-button'>
                                         <b>{downloadsInfo[platformId]}</b>
                                         <div>
-                                            <FontAwesomeIcon icon={faFileArrowDown}/> {latestBuild.downloads[platformId].name}
+                                            <FontAwesomeIcon icon={faFileArrowDown}/> {staticDownloads ? 'Latest release' : latestBuild.downloads[platformId].name}
                                         </div>
                                     </a>
                                 )
@@ -116,20 +122,22 @@ export const ProjectDownload: React.FC<ProjectDownloadProps> = ({ projectId, des
                         }
                     </Grid>
                 </Column>
-                <Column>
-                    <h3>Recent Changes:</h3>
-                    <ul>
-                        {
-                            changes.map((change, i) => {
-                                return (
-                                    <li key={i}><b>{
-                                        <a className='download-link' href={`https://github.com/GeyserMC/${platformInfo.project_name}/commit/${change.commit}`}>{change.commit.substring(0, 7)}</a>
-                                    }</b> · {<LinkedCommitMessage message={change.summary} repo={platformInfo.project_name}/>}</li>
-                                )
-                            })
-                        }
-                    </ul>
-                </Column>
+                { !staticDownloads &&
+                    <Column>
+                        <h3>Recent Changes:</h3>
+                        <ul>
+                            {
+                                changes.map((change, i) => {
+                                    return (
+                                        <li key={i}><b>{
+                                            <a className='download-link' href={`https://github.com/GeyserMC/${platformInfo.project_name}/commit/${change.commit}`}>{change.commit.substring(0, 7)}</a>
+                                        }</b> · {<LinkedCommitMessage message={change.summary} repo={platformInfo.project_name}/>}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </Column>
+                }
             </Columns>
         </div>
     );
