@@ -49,13 +49,7 @@
         "typescript": "5.7.2"
     },
     "resolutions": {
-        "postman-code-generators": "1.14.0",
-        "webpack": "5.97.1",
-        "@docusaurus/plugin-content-docs": "3.6.3"
-    },
-    "overrides": {
-        "webpack": "5.97.1",
-        "@docusaurus/plugin-content-docs": "3.6.3"
+        "postman-code-generators": "1.14.0"
     },
     "browserslist": {
         "production": [

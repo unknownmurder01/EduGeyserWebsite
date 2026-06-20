@@ -8360,6 +8360,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"edugeyser-website@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "edugeyser-website@workspace:."
+  dependencies:
+    "@docusaurus/core": "npm:3.6.3"
+    "@docusaurus/module-type-aliases": "npm:^3.6.3"
+    "@docusaurus/preset-classic": "npm:3.6.3"
+    "@docusaurus/tsconfig": "npm:^3.6.3"
+    "@docusaurus/types": "npm:^3.6.3"
+    "@fortawesome/fontawesome-svg-core": "npm:6.5.1"
+    "@fortawesome/free-brands-svg-icons": "npm:6.5.1"
+    "@fortawesome/free-regular-svg-icons": "npm:6.5.1"
+    "@fortawesome/free-solid-svg-icons": "npm:6.5.1"
+    "@fortawesome/react-fontawesome": "npm:0.2.0"
+    "@kas-tle/docusaurus-og": "https://github.com/Kas-tle/docusaurus-og"
+    "@mdx-js/react": "npm:3.0.0"
+    clsx: "npm:1.2.1"
+    docusaurus-plugin-openapi-docs: "npm:4.3.0"
+    docusaurus-plugin-sass: "npm:0.2.5"
+    docusaurus-theme-openapi-docs: "npm:4.3.0"
+    prism-react-renderer: "npm:2.1.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-markdown: "npm:^9.0.0"
+    sass: "npm:1.77.8"
+    typescript: "npm:5.7.2"
+  languageName: unknown
+  linkType: soft
+
 "ee-first@npm:1.1.1":
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
@@ -9270,35 +9299,6 @@ __metadata:
   checksum: 10c0/49825d57d3fd6964228e6200a58169464b8e8970489b3acdc24906c782fb7f01f9f56f8e6653c4a50713771d6658f7cfe051e5eb8c12e334138c9c918b296341
   languageName: node
   linkType: hard
-
-"geyser-wiki@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "geyser-wiki@workspace:."
-  dependencies:
-    "@docusaurus/core": "npm:3.6.3"
-    "@docusaurus/module-type-aliases": "npm:^3.6.3"
-    "@docusaurus/preset-classic": "npm:3.6.3"
-    "@docusaurus/tsconfig": "npm:^3.6.3"
-    "@docusaurus/types": "npm:^3.6.3"
-    "@fortawesome/fontawesome-svg-core": "npm:6.5.1"
-    "@fortawesome/free-brands-svg-icons": "npm:6.5.1"
-    "@fortawesome/free-regular-svg-icons": "npm:6.5.1"
-    "@fortawesome/free-solid-svg-icons": "npm:6.5.1"
-    "@fortawesome/react-fontawesome": "npm:0.2.0"
-    "@kas-tle/docusaurus-og": "https://github.com/Kas-tle/docusaurus-og"
-    "@mdx-js/react": "npm:3.0.0"
-    clsx: "npm:1.2.1"
-    docusaurus-plugin-openapi-docs: "npm:4.3.0"
-    docusaurus-plugin-sass: "npm:0.2.5"
-    docusaurus-theme-openapi-docs: "npm:4.3.0"
-    prism-react-renderer: "npm:2.1.0"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-markdown: "npm:^9.0.0"
-    sass: "npm:1.77.8"
-    typescript: "npm:5.7.2"
-  languageName: unknown
-  linkType: soft
 
 "github-slugger@npm:^1.5.0":
   version: 1.5.0
